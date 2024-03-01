@@ -7,8 +7,6 @@ const func = async () => {
 var month = currentDate.getMonth() + 1
 var year = currentDate.getFullYear()
 const date = day + "-" + month + "-" + year
-console.log("INSIDE "+currentDate.toLocaleTimeString())
-
 try{
     const response = await axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=571&date='+date,{
         headers : {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
@@ -29,6 +27,5 @@ catch(error){
 }
 
 }
-// func()
 setInterval(func, 150000);
 
