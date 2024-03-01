@@ -1,4 +1,4 @@
-const {telegramKey,chatid} = require('./utils/key')
+const {telegramKey,chatid} = require('./secrets/key')
 const tele_func = (name,date,number) => {
     var TelegramBot = require('telegrambot');
     var api = new TelegramBot(telegramKey);
